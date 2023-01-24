@@ -131,13 +131,31 @@ body {
 }
 
 #card {
-  width: 30vw;
-  height: 25vh;
+  width: 50vw;
+  height: 52vh;
   align-self: center;
-  background-color: white !important;
+  background-color: #202020 !important;
   border-radius: 12px;
   border: 3px solid rgb(255, 255, 255);
-  padding: 2rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+#imageContainer img{
+  border-radius: 50%;
+  max-width: 13vw;
+  -webkit-box-shadow: 0px 12px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 12px 20px 0px rgba(0,0,0,0.75);
+  border: 3px solid rgb(0, 158, 13);
+}
+
+#card h1 {
+  font-size: 2rem;
+  color: white;
+  animation: glow 2.3s ease-out infinite;
 }
 
 #card::before {
@@ -173,6 +191,7 @@ body {
    cursor: text;
    height: 2vh;
    z-index: 2;
+   color: white;
 }
 
 #card::after {
@@ -180,26 +199,6 @@ body {
   width: 30vw;
   height: 12.5vw;
   position: absolute;
-}
-
-#card p::after {
-  content: "|";
-  animation: text 1.2s infinite;
-}
-
-@keyframes text {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
 }
 
 /* ---- CARD // CARD // CARD ---- */
@@ -216,7 +215,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   color: white;
   cursor: default;
 }
@@ -224,7 +223,7 @@ body {
 #footer::before {
     content: "";
     z-index: 2;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     width: 100vw;
     height: 3px;
     top: -1px;
