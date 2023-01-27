@@ -4,6 +4,7 @@
   font-family: "Courier Prime", monospace;
   font-weight: 400;
   text-align: center;
+  text-transform: lowercase;
 }
 
 *::-webkit-scrollbar {
