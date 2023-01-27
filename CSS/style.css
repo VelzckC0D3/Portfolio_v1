@@ -175,6 +175,11 @@ body {
   font-size: 150%;
 }
 
+#name h1 {
+  color: rgb(0, 255, 13);
+  -webkit-animation-delay: 1s;
+}
+
 #cardText {
   background-color: rgb(10, 10, 10);
   padding: 1rem 1rem 4rem;
@@ -186,7 +191,6 @@ body {
 
 #card h1 {
   font-size: 150%;
-  color: white;
   animation: glow 6s ease-out infinite;
 }
 
