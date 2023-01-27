@@ -4,7 +4,6 @@
   font-family: "Courier Prime", monospace;
   font-weight: 400;
   text-align: center;
-  text-transform: lowercase;
 }
 
 *::-webkit-scrollbar {
@@ -12,7 +11,7 @@
 }
 
 body {
-  background: linear-gradient(300deg, rgb(118, 14, 238), rgb(0, 0, 0));
+  background: linear-gradient(300deg, rgb(143, 0, 179), rgb(0, 0, 0));
   background-size: 200% 200%;
   animation: gradient-animation 9s ease infinite;
   width: 100vw;
@@ -64,7 +63,7 @@ body {
 
 #header {
   z-index: 2;
-  max-height: 10vh;
+  max-height: 7vh;
 }
 
 #headerContainer {
@@ -131,7 +130,7 @@ body {
 
 #card {
   width: 55vw;
-  height: 70vh;
+  height: 77vh;
   background-color: #202020;
   border-radius: 12px;
   border: 3px solid rgb(255, 255, 255);
@@ -171,11 +170,27 @@ body {
 
 #cardText {
   background-color: rgb(10, 10, 10);
-  padding: 1rem 1rem 4rem;
+  padding: 0rem 1rem 5rem;
+  height: 10rem;
   border-radius: 12px;
   border: 3px solid rgb(138, 138, 138);
   -webkit-box-shadow: inset -9px 11px 16px 0px rgba(0, 0, 0, 0.75);
   box-shadow: inset -9px 11px 16px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#cardText::before {
+  content: "Administrator: Command Prompt";
+  display: flex;
+  flex: row;
+  text-align: left;
+  background-color: rgb(49, 49, 49);
+  padding: 0.5vh 0 0.5vh 10vh;
+  color: rgb(153, 153, 153);
+  width: 110%;
+  align-self: center;
 }
 
 #card h1 {
