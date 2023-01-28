@@ -199,14 +199,13 @@ body {
   align-items: center;
   justify-content: center;
   color: rgb(255, 255, 255);
-  background-color: red;
+  background-color: rgb(49, 49, 49);
   position: absolute;
   justify-self: center;
   align-self: flex-end;
   width: 8rem;
-  height: 3.4vh;
   margin: 0rem -1rem 0rem 0rem;
-  padding: 0rem 0rem 0rem 0rem;
+  padding: 0.21rem 0rem 0.21rem 0rem;
   border-radius: 0 10px 0px 0 ;
   cursor:pointer;
 }
