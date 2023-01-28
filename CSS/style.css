@@ -193,6 +193,23 @@ body {
   align-self: center;
 }
 
+#cardText::after {
+  content: "- | | X";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: green;
+  background-color: red;
+  position: absolute;
+  justify-self: center;
+  align-self: flex-end;
+  width: 8rem;
+  height: 3.5vh;
+  margin: 0rem -1rem 0rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
+  border-radius: 0 10px 0px 0 ;
+}
+
 #card h1 {
   font-size: 150%;
   animation: glow 6s ease-out infinite;
