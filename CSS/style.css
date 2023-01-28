@@ -215,6 +215,9 @@ body {
 #card h1 {
   font-size: 150%;
   animation: glow 6s ease-out infinite;
+  font-size: 1rem;
+  text-align: center;
+  margin: 1.3rem 0 1rem 0;
 }
 
 #card::before {
@@ -287,11 +290,12 @@ body {
 }
 
 #card p {
-  font-size: 100%;
+  font-size: 0.85rem;
   cursor: text;
   height: 2vh;
   z-index: 2;
   color: rgb(184, 184, 184);
+  text-align: left;
 }
 
 #card::after {
