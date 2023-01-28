@@ -194,20 +194,21 @@ body {
 }
 
 #cardText::after {
-  content: "- | | X";
+  content: "- | □ | X";
   display: flex;
   align-items: center;
   justify-content: center;
-  color: green;
+  color: rgb(255, 255, 255);
   background-color: red;
   position: absolute;
   justify-self: center;
   align-self: flex-end;
   width: 8rem;
-  height: 3.5vh;
+  height: 3.4vh;
   margin: 0rem -1rem 0rem 0rem;
   padding: 0rem 0rem 0rem 0rem;
   border-radius: 0 10px 0px 0 ;
+  cursor:pointer;
 }
 
 #card h1 {
