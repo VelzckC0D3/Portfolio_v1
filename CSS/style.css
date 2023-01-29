@@ -11,7 +11,7 @@
 }
 
 body {
-  background: linear-gradient(300deg, rgb(143, 0, 179), rgb(0, 0, 0));
+  background: linear-gradient(300deg, rgb(36, 0, 41), rgb(30, 0, 70));
   background-size: 200% 200%;
   animation: gradient-animation 9s ease infinite;
   width: 100vw;
@@ -147,17 +147,28 @@ body {
 #imageContainer {
   display: flex;
   padding: 1rem;
+  z-index: 2;
 }
 
-#imageContainer img {
-  border-radius: 16px;
+#imageContainer #image {
+  background-color: rgba(63, 0, 0, 0);
+  border-radius: 50%;
   max-width: 13vw;
   min-width: 13vh !important;
   justify-self: start;
-  /*   -webkit-box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.75);
-  border: 3px solid rgb(0, 158, 13); */
+  -webkit-transition: all 500ms ease-in-out;
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg);
+  border: 3px solid rgba(0, 158, 13, 0);
 }
+
+#imageContainer:hover #image {
+/*   transform: rotateY(160deg); */    
+  -webkit-box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.75);
+  border: 3px solid rgb(0, 158, 13);
+  cursor: pointer;
+}
+
 
 #name {
   font-size: 150%;
