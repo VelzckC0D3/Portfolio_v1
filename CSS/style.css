@@ -317,6 +317,17 @@ body {
 
 /* ////////////////////////////////////// */
 
+/* ---- CONTENT // CONTENT // CONTENT ---- */
+
+#content_title {
+  color: white;
+  text-transform: lowercase;
+}
+
+/* ---- CONTENT // CONTENT // CONTENT ---- */
+
+/* ////////////////////////////////////// */
+
 /* ---- FOOTER // FOOTER // FOOTER ---- */
 
 #footer {
