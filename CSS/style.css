@@ -148,6 +148,7 @@ body {
   display: flex;
   padding: 1rem;
   z-index: 2;
+  border-radius: 50%;
 }
 
 #imageContainer #image {
