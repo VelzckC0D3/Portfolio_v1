@@ -179,7 +179,7 @@ body {
   -webkit-animation-delay: 10s;
 }
 
-#cardText {
+#console {
   background-color: rgb(10, 10, 10);
   padding: 0rem 1rem 5rem;
   height: 10rem;
@@ -192,7 +192,7 @@ body {
   overflow: hidden;
 }
 
-#cardText::before {
+#console::before {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 200;
   font-size: 0.9rem;
@@ -207,7 +207,7 @@ body {
   align-self: center;
 }
 
-#cardText::after {
+#console::after {
   content: "- | □ | X";
   display: flex;
   align-items: center;
@@ -261,10 +261,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
-  background-color: rgb(17, 17, 17);
-  height: 7vh;
-  width: 75vw;
+  height: 10vh;
   position: relative;
 }
 
@@ -287,9 +284,8 @@ body {
 }
 
 #socialMedia li:hover .link {
-  color: white;
+  color: rgb(0, 255, 13);
   font-weight: bold;
-  text-shadow: 0px 0px 20px #ffffff57;
 }
 
 .link {
