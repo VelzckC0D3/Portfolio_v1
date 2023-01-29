@@ -122,6 +122,10 @@ body {
 
 /* ---- CARD // CARD // CARD ---- */
 
+#presentation {
+  color: white;
+}
+
 #cardContainer {
   padding: 1rem;
   top: 0;
@@ -130,7 +134,7 @@ body {
 
 #card {
   width: 55vw;
-  height: 77vh;
+  /* height: 77vh; */
   background-color: #202020;
   border-radius: 12px;
   border: 3px solid rgb(255, 255, 255);
