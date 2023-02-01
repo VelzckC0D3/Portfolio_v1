@@ -89,7 +89,7 @@ body {
   align-items: center;
 }
 
-#headerText h1 {
+#headerText .span1 {
   font-weight: 400;
   text-transform: lowercase;
   color: rgb(255, 255, 255);
@@ -230,7 +230,6 @@ body {
 
 #card h1 {
   font-size: 150%;
-  animation: glow 6s ease-out infinite;
   font-size: 1rem;
   text-align: center;
   margin: 1.3rem 0 1rem 0;
@@ -282,6 +281,15 @@ body {
 
 #span {
   color: rgb(0, 255, 13);
+}
+
+.glow1{
+  animation: glow 6s ease-out infinite;
+  animation-delay: 2s;
+}
+
+.glow2{
+  animation: glow 6s ease-out infinite;
 }
 
 #socialMedia li:hover {
