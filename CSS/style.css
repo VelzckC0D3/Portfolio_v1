@@ -11,7 +11,7 @@
 }
 
 body {
-  background: linear-gradient(270deg, rgb(36, 0, 41), rgb(30, 0, 70));
+  background: linear-gradient(270deg, rgb(120, 0, 136), rgb(8, 0, 19));
   background-size: 200% 200%;
   animation: gradient-animation 9s ease infinite;
   width: 100vw;
@@ -62,42 +62,36 @@ body {
 /* ---- HEADER // HEADER // HEADER ---- */
 
 #header {
-  z-index: 2;
+  z-index: 3;
   max-height: 7vh;
 }
 
-#headerContainer {
-  background-color: rgb(0, 0, 0);
+#headerCont {
+  background-color: rgba(0, 0, 0, 0.85);
   display: flex;
+  flex-direction: row;
   width: 100vw;
   height: 7vh;
-  justify-content: center;
+  justify-content: space-between;
+  position: fixed;
 }
 
 #header::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 7vh;
   width: 100%;
   height: 3px;
   background-color: rgb(255, 255, 255);
-  z-index: 1;
+  z-index: 2;
 }
 
 #headerText {
   display: flex;
   align-items: center;
+  margin-left: 1rem;
   color: white;
   font-size: 75%;
-}
-
-#headerText .span1 {
-  font-weight: 400;
-  text-transform: lowercase;
-  color: rgb(255, 255, 255);
-  user-select: none;
-  font-size: 100%;
-  animation: glow 5s ease-out infinite;
 }
 
 @keyframes glow {
@@ -118,43 +112,27 @@ body {
   }
 }
 
-/* ---- HEADER // HEADER // HEADER ---- */
-
-/* ////////////////////////////////////// */
-
-/* ---- CARD // CARD // CARD ---- */
-
-#presentation {
+#menu {
+  width: 30%;
   color: white;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  align-self: flex-end;
+  list-style: none;
 }
 
-#cardContainer {
-  padding: 1rem;
+/* ---- HEADER // HEADER // HEADER ---- */
+
+#mainCont {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   top: 0;
   bottom: 0;
-}
-
-#card {
-  width: 55vw;
-  /* height: 77vh; */
-  background-color: #202020;
-  border-radius: 12px;
-  border: 3px solid rgb(255, 255, 255);
-  padding: 1rem 3rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  flex-wrap: nowrap;
 }
 
 #main {
@@ -168,42 +146,99 @@ body {
   align-items: center;
 }
 
+.mainText {
+  text-align: left;
+  color: white;
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
 #image {
   width: 55vh;
   height: 55vh;
   flex-shrink: 0;
   border-radius: 50%;
-  padding: 0rem 3rem 0rem 0rem;
+  border-radius: 65% 50% 65% 50%;
   justify-self: start;
-  -webkit-transition: all 500ms ease-in-out;
-  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg)
-    rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg)
-    skewY(0deg);
-  border: 3px solid rgba(0, 255, 21, 0);
-  opacity: 1;
+  -webkit-box-shadow: -12px 15px 31px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -12px 15px 31px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: -12px 15px 31px -8px rgba(0, 0, 0, 0.75);
+  z-index: 1;
+  
 }
 
-#main h1 {
-  text-align: left !important;
-  color: rgb(255, 255, 255);
+#presentation {
+  background-color: rgba(0, 0, 0, 0.61);
+  border: 2px solid white;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 1rem 1rem 5rem;
+  transform: translateX(-4rem);
+  width: 55vw !important;
 }
 
-#main p {
-  text-align: left !important;
-}
-
-#name {
+#actionCont {
+  text-decoration: none;
   font-size: 150%;
+  margin: 1rem 0 0;
+  width: 11rem;
+  height: 4rem;
+  text-align: center;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
 }
 
-#name h1 {
-  color: rgb(0, 255, 13);
-  -webkit-animation-delay: 10s;
+#action {
+  display: flex;
+  flex-direction: column;
+  width: 11rem;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+  color: rgb(109, 109, 109);
+  text-decoration: none;
+  text-transform: lowercase;
+  transition: all 300ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.425);
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 50px;
+}
+
+#action:hover {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid rgb(255, 255, 255);
+}
+
+
+/* ////////////////////////////////////// */
+
+/* ---- CARD // CARD // CARD ---- */
+
+#card {
+  width: 100%;
+  /* height: 77vh; */
+  background-color: #202020;
+  border-top: 3px solid rgb(255, 255, 255);
+  padding: 1rem 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  flex-wrap: nowrap;
 }
 
 #console {
   background-color: rgb(10, 10, 10);
   padding: 0rem 1rem 0rem;
+  width: 65vw;
   /*   height: 10rem; */
   border-radius: 12px;
   border: 3px solid rgb(138, 138, 138);
@@ -259,7 +294,7 @@ body {
   text-align: center !important;
 }
 
-.grid-test {
+.grid-pos {
   grid-area: 4 / 2 / 1 / 4;
   justify-content: center;
   align-items: center;
@@ -354,7 +389,7 @@ body {
 #card p {
   font-size: 0.85rem;
   cursor: text;
-  z-index: 2;
+  z-index: 1;
   color: rgb(184, 184, 184);
   text-align: left;
 }
