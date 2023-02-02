@@ -11,6 +11,7 @@
   font-family: "Courier Prime", monospace;
   font-weight: 400;
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 *::-webkit-scrollbar {
@@ -18,7 +19,7 @@
 }
 
 body {
-  background: linear-gradient(270deg, rgb(120, 0, 136), rgb(8, 0, 19));
+  background: linear-gradient(270deg, rgb(120, 0, 136), rgb(0, 0, 0));
   background-size: 200% 200%;
   animation: gradient-animation 9s ease infinite;
   width: 100vw;
@@ -133,6 +134,11 @@ body {
   list-style: none;
 }
 
+#menu a {
+  text-decoration: none !important;
+  color:  white;
+}
+
 /* ---- HEADER // HEADER // HEADER ---- */
 
 #mainCont {
@@ -192,22 +198,16 @@ body {
   padding: 0rem 0rem 0rem 0rem;
 }
 
+.mainText span {
+  color: var(--pGreen);
+}
+
 #presentation h1 {
   color: white !important;
 }
 
 #presentation p {
   padding: 0.5rem 0 0.5rem;
-}
-
-#image:hover ~ #presentation{
-  box-shadow: 0 0.5em 0.5em 0em rgba(0, 0, 0, 0.5);
-  border: 3px solid rgb(0, 255, 13);
-}
-
-#image:hover {
-  box-shadow: 0 0.5em 0.5em 0em rgba(0, 0, 0, 0.5);
-  border: 3px solid rgb(0, 255, 13);
 }
 
 #actionCont {
@@ -475,6 +475,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  z-index: 2;
 }
 
 #footerS {
