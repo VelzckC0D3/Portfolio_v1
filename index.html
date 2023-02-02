@@ -17,7 +17,7 @@
 
 <body>
 
-    <img id="bg" src="CSS/img/bg.jpg" alt="">
+    <img id="bg" src="CSS/img/bg.webp" alt="">
 
     <!-- --- HEADER // HEADER // HEADER --- -->
 
@@ -29,9 +29,9 @@
 
             <ul id="menu">
                 <li><a href="#header">home</a></li>
-                <li><a href="#divider">my goal</a></li>
-                <li><a href="#card">projects</a> </li>
-                <li><a href="#footer">contact</a></li>
+                <li><a href="#main">my goal</a></li>
+                <li><a href="#projects">projects</a> </li>
+                <li><a href="#footer">about me</a></li>
             </ul>
         </div>
     </header>
@@ -40,7 +40,7 @@
 
     <section id="mainCont">
         <div id="main">
-            <img id="image" src="CSS/img/profile.png" alt="">
+            <img id="image" src="CSS/img/profile.webp" alt="">
             <div id="presentation">
                 <div id="divisor"></div>
                 <h1 class="mainText">I'm Alejandro Velasquez:</h1>
@@ -49,7 +49,8 @@
                 <p class="mainText">
                     I am a motivated young man from Medellín, Colombia. Currently, I am improving my skills at the
                     <span>Microverse</span>
-                    Bootcamp where I'm training as an international full-stack web developer.</p>
+                    Bootcamp where I'm training as an international full-stack web developer.
+                </p>
                 <p class="mainText"> I'm concentrating on technologies like <span>JavaScript</span>,
                     <span>React.js</span>, <span>Redux</span>, <span>Ruby on Rails</span>, as well
                     as <span>data structures</span>, and I'll be more than glad to work / collaborate with you, feel
@@ -62,37 +63,36 @@
 
             </div>
         </div>
-        <div id="divider">
-
+        <div id="projects">
+           <h1>.</h1>
         </div>
         <div id="card" class="container">
+            <div id="divider">
+                <h1>Here are some projects that I've developed alone (only HTML, CSS and a bite of JavaScript)</h1>
+            </div>
             <div>
             </div>
-            <div id="console">
-                <h1><span id="span" class="glow1">&ltfull-stack web developer/></span></h1>
-                <p>Hello World!, my name is Alejandro Velasquez. I'm actually a front end web developer student from
-                    Medellin, Colombia.
-                </p>
-                <p>I am passionate about creating visually stunning and user-friendly websites. I look forward to
-                    sharing my skills and knowledge with others in the field and continuing to grow as a developer.</p>
-                <div id="socialMedia">
-                    <li><a class="link" href="https://github.com/VelzckC0D3" target="_blank">&ltGitHub></a></li>
-                    <li><a class="link" href="https://www.linkedin.com/in/velzckcode/" target="_blank">&ltLinkedin></a>
-                    </li>
-                </div>
-            </div>
+
             <section id="content">
-                <div>
-                    <h1 id="content_title">
-                        My Projects
-                    </h1>
+                <div id="console">
+                    <h1><span id="span" class="glow1">&ltfull-stack web developer/></span></h1>
+                    <p>Hello World!, my name is Alejandro Velasquez. I'm actually a front end web developer student from
+                        Medellin, Colombia.
+                    </p>
+                    <p>I am passionate about creating visually stunning and user-friendly websites. I look forward to
+                        sharing my skills and knowledge with others in the field and continuing to grow as a developer.</p>
+                    <div id="socialMedia">
+                        <li><a class="link" href="https://github.com/VelzckC0D3" target="_blank">&ltGitHub></a></li>
+                        <li><a class="link" href="https://www.linkedin.com/in/velzckcode/" target="_blank">&ltLinkedin></a>
+                        </li>
+                    </div>
                 </div>
                 <div id="console">
                     <div id="projects_grid">
                         <h1><span id="span" class="glow2">&lte-commerce website demo></span>
                             <p>lorem</p>
                         </h1>
-                        <img class="grid-pos" id="imggrid" src="CSS/img/profile.png" alt="">
+                        <img class="grid-pos" id="imggrid" src="CSS/img/profile.webp" alt="">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus aut quaerat vitae iusto, odit
                             magnam, enim praesentium, perspiciatis possimus est saepe. A molestiae maiores, officiis id
                             quidem doloremque similique qui!</p>
@@ -123,12 +123,42 @@
     <footer id="footer" class="container shadow">
         <div id="footerCont">
             <div id="footerSocial">
-                <ul id="footerLinks">
-                    <li class="footerLinks">Github</li>
-                    <li class="footerLinks">Linkedin</li>
-                    <li class="footerLinks">Whatsapp</li>
-                    <li></li>
-                </ul>
+            </div>
+            <div id="footerInfo">
+                <div class="footerInfo">
+                    <h2>About Me</h2>
+                    <p>I'm a full-stack web developer that wants to make applications with fluent functions and
+                        animations,
+                        clear interface that allows the user to navigate through it without problems, offering the best
+                        optimization and functions to allow the user to have a friendly experience with my websites.</p>
+
+                </div>
+
+                <div class="footerInfo">
+                    <h2>Social Networks</h2>
+                    <a class="socialNetworks" href="https://www.linkedin.com/in/velzckcode/"
+                        target="_blank">&ltLinkedin></a>
+                    <a class="socialNetworks" href="https://github.com/VelzckC0D3" target="_blank">&ltGitHub></a>
+                    <a class="socialNetworks" href="https://www.instagram.com/alejandro.velzck/"
+                        target="_blank">&ltInstagram></a>
+                </div>
+
+                <div class="footerInfo">
+                    <h2>Skills</h2>
+                    <p>At this moment I'm learning at the Microverse international bootcamp, focusing on technologies
+                        such as: <span>JavaScript</span>, <span>TypeScript</span>, <span>React.js</span>,
+                        <span>Redux</span>, <span>Ruby</span>, <span>Ruby on Rails</span>, also on <span>Data
+                            Structures</span>
+                    </p>
+
+                </div>
+            </div>
+            <div id="endLineCont">
+                <div id="endLine"></div>
+            </div>
+            <div id="end">
+                <h1>&ltAlejandro Velasquez (velzckC0D3) - 2023></h1>
+                <h1>Medellin, Colombia</h1>
             </div>
         </div>
     </footer>
