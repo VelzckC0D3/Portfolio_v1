@@ -1,5 +1,12 @@
 /* ---- GLOBALS // GLOBALS // GLOBALS ---- */
 
+:root {
+  --unselected: rgb(114, 114, 114);
+  --pGreen: rgb(0, 255, 13);
+  --pGrey: rgb(184, 184, 184);
+}
+
+
 * {
   font-family: "Courier Prime", monospace;
   font-weight: 400;
@@ -74,6 +81,9 @@ body {
   height: 7vh;
   justify-content: space-between;
   position: fixed;
+  -webkit-box-shadow: 0px 1px 53px 22px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 53px 22px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 53px 22px rgba(0, 0, 0, 0.75);
 }
 
 #header::before {
@@ -82,7 +92,7 @@ body {
   top: 7vh;
   width: 100%;
   height: 3px;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   z-index: 2;
 }
 
@@ -146,12 +156,6 @@ body {
   align-items: center;
 }
 
-.mainText {
-  text-align: left;
-  color: white;
-  margin: 0rem 0rem 0rem 0rem;
-  padding: 0rem 0rem 0rem 0rem;
-}
 
 #image {
   width: 55vh;
@@ -160,30 +164,55 @@ body {
   border-radius: 50%;
   border-radius: 65% 50% 65% 50%;
   justify-self: start;
-  -webkit-box-shadow: -12px 15px 31px -8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -12px 15px 31px -8px rgba(0, 0, 0, 0.75);
-  box-shadow: -12px 15px 31px -8px rgba(0, 0, 0, 0.75);
   z-index: 1;
-  
+  transition: all 500ms ease-in-out;
+  border: 3px solid white;
 }
 
 #presentation {
+  position: relative;
   background-color: rgba(0, 0, 0, 0.61);
-  border: 2px solid white;
+  border: 3px solid white;
   color: white;
   border-radius: 0 20px 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem 1rem 1rem 5rem;
-  transform: translateX(-4rem);
+  padding: 1rem 1rem 1rem 12rem;
+  margin: 0rem -11rem 0rem 0rem;
+  left: -11rem;
   width: 55vw !important;
+  transition: all 500ms ease-in-out;
+}
+
+.mainText {
+  text-align: left;
+  color: var(--pGrey);
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+#presentation h1 {
+  color: white !important;
+}
+
+#presentation p {
+  padding: 0.5rem 0 0.5rem;
+}
+
+#image:hover ~ #presentation{
+  box-shadow: 0 0.5em 0.5em 0em rgba(0, 0, 0, 0.5);
+  border: 3px solid rgb(0, 255, 13);
+}
+
+#image:hover {
+  box-shadow: 0 0.5em 0.5em 0em rgba(0, 0, 0, 0.5);
+  border: 3px solid rgb(0, 255, 13);
 }
 
 #actionCont {
   text-decoration: none;
   font-size: 150%;
-  margin: 1rem 0 0;
   width: 11rem;
   height: 4rem;
   text-align: center;
@@ -196,25 +225,26 @@ body {
 #action {
   display: flex;
   flex-direction: column;
-  width: 11rem;
-  height: 4rem;
+  width: 10rem;
+  height: 2rem;
   align-items: center;
   justify-content: center;
-  color: rgb(109, 109, 109);
+  color: var(--unselected);
   text-decoration: none;
   text-transform: lowercase;
   transition: all 600ms ease-in-out;
-  background-color: rgba(0, 0, 0, 0.425);
+  background-color: rgba(0, 0, 0, 0);
   border: 2px solid rgba(255, 255, 255, 0);
   border-radius: 20px;
 }
 
 #action:hover {
   color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   border: 2px solid rgb(0, 0, 0);
+  width: 11rem;
+  height: 3rem;
 }
-
 
 /* ////////////////////////////////////// */
 
@@ -224,7 +254,7 @@ body {
   width: 100%;
   /* height: 77vh; */
   background-color: #202020;
-  border-top: 3px solid rgb(255, 255, 255);
+  border-top: 3px solid white;
   padding: 1rem 0rem 1rem;
   display: flex;
   flex-direction: column;
@@ -259,7 +289,7 @@ body {
   text-align: left;
   background-color: rgb(49, 49, 49);
   padding: 0.5vh 0px 1vh 10vh;
-  color: rgb(255, 255, 255);
+  color: white;
   width: 110%;
   align-self: center;
 }
@@ -269,7 +299,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(255, 255, 255);
+  color: white;
   position: absolute;
   justify-self: center;
   align-self: flex-end;
@@ -351,13 +381,13 @@ body {
   text-decoration: none;
   list-style-type: none;
   padding: 1rem 1rem;
-  color: rgb(114, 114, 114);
+  color: --unselected;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
 #span {
-  color: rgb(0, 255, 13);
+  color: var(--pGreen);
 }
 
 .glow1 {
@@ -370,17 +400,17 @@ body {
 }
 
 #socialMedia li:hover {
-  color: rgb(255, 255, 255) !important;
+  color: white !important;
 }
 
 #socialMedia li:hover .link {
-  color: rgb(0, 255, 13);
+  color: var(--pGreen);
   font-weight: bold;
 }
 
 .link {
   text-decoration: none;
-  color: rgb(114, 114, 114);
+  color: var(--unselected);
   height: 1rem;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -390,7 +420,7 @@ body {
   font-size: 0.85rem;
   cursor: text;
   z-index: 1;
-  color: rgb(184, 184, 184);
+  color: var(--pGrey);
   text-align: left;
 }
 
@@ -440,7 +470,7 @@ body {
 #footerSocial {
   width: 100vw;
   height: 5rem;
-  background-color: rgba(255, 255, 255, 0.151);
+  background-color: rgba(255, 255, 255, 0.062);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -467,7 +497,7 @@ body {
   width: 100%;
   height: 3px;
   align-self: flex-start;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   position: absolute;
 }
 
