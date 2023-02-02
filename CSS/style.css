@@ -11,7 +11,7 @@
 }
 
 body {
-  background: linear-gradient(300deg, rgb(36, 0, 41), rgb(30, 0, 70));
+  background: linear-gradient(270deg, rgb(36, 0, 41), rgb(30, 0, 70));
   background-size: 200% 200%;
   animation: gradient-animation 9s ease infinite;
   width: 100vw;
@@ -87,6 +87,8 @@ body {
 #headerText {
   display: flex;
   align-items: center;
+  color: white;
+  font-size: 75%;
 }
 
 #headerText .span1 {
@@ -124,10 +126,17 @@ body {
 
 #presentation {
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #cardContainer {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   top: 0;
   bottom: 0;
 }
@@ -148,33 +157,36 @@ body {
   flex-wrap: nowrap;
 }
 
-#imageContainer {
+#main {
   display: flex;
-  padding: 1rem;
+  width: 80vw;
+  height: 85vh;
+  flex-direction: row;
+  padding: 1rem 0rem 7rem;
   z-index: 2;
-  border-radius: 50%;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-#imageContainer #image {
+#image {
+  width: 55vh;
+  height: 55vh;
+  flex-shrink: 0;
   border-radius: 50%;
-  max-width: 13vw;
-  min-width: 13vh !important;
+  padding: 0rem 3rem 0rem 0rem;
   justify-self: start;
   -webkit-transition: all 500ms ease-in-out;
-  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg);
-  border: 3px solid rgba(0, 158, 13, 0);
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg)
+    rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg)
+    skewY(0deg);
+  border: 3px solid rgba(0, 255, 21, 0);
   opacity: 1;
 }
 
-#imageContainer:hover #image {
-/*   transform: rotateY(160deg); */    
-  -webkit-box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.75);
-  border: 3px solid rgb(0, 158, 13);
-  cursor: pointer;
-  -webkit-transform: scale(1.1);
+#main h1 {
+  text-align: left !important;
+  color: rgb(255, 255, 255);
 }
-
 
 #name {
   font-size: 150%;
@@ -188,7 +200,7 @@ body {
 #console {
   background-color: rgb(10, 10, 10);
   padding: 0rem 1rem 0rem;
-/*   height: 10rem; */
+  /*   height: 10rem; */
   border-radius: 12px;
   border: 3px solid rgb(138, 138, 138);
   -webkit-box-shadow: inset -9px 11px 16px 0px rgba(0, 0, 0, 0.75);
@@ -199,7 +211,7 @@ body {
 }
 
 #console::before {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 200;
   font-size: 0.9rem;
   content: "Administrator: Command Prompt";
@@ -225,8 +237,8 @@ body {
   width: 8rem;
   margin: 0rem -1rem 0rem 0rem;
   padding: 0.21rem 0rem 0.21rem 0rem;
-  border-radius: 0 10px 0px 0 ;
-  cursor:pointer;
+  border-radius: 0 10px 0px 0;
+  cursor: pointer;
 }
 
 #projects_grid {
@@ -252,7 +264,6 @@ body {
 }
 
 #imggrid {
-
 }
 
 #card h1 {
@@ -310,12 +321,12 @@ body {
   color: rgb(0, 255, 13);
 }
 
-.glow1{
+.glow1 {
   animation: glow 6s ease-out infinite;
   animation-delay: 2s;
 }
 
-.glow2{
+.glow2 {
   animation: glow 6s ease-out infinite;
 }
 
