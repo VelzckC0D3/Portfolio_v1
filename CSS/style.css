@@ -301,6 +301,11 @@ body {
   color: transparent;
 }
 
+#goals {
+  height: 5vh;
+  color: transparent;
+}
+
 #divider {
   width: 100vw;
   height: 7vh;
