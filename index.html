@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css"> <!-- style -->
     <link rel="stylesheet" href="CSS/normalize.css"> <!-- normalize CSS -->
     <link rel="stylesheet" href="CSS/responsive.css">
-
-    <title>Portfolio V1.0 (private)</title>
+    <title> Portfolio V1.0 (private)</title>
+    <link rel="icon" href="CSS/icon/suitcase.svg">
+    
 </head>
 
 <body>
@@ -20,7 +22,7 @@
     <img id="bg" src="CSS/img/bg.webp" alt="">
 
     <!-- --- HEADER // HEADER // HEADER --- -->
-
+    <div id="home"></div>
     <header id="header" class="container shadow">
         <div id="headerCont">
             <div id="headerText">
@@ -28,8 +30,8 @@
             </div>
 
             <ul id="menu">
-                <li><a href="#header">home</a></li>
-                <li><a href="#main">my goal</a></li>
+                <li><a href="#home">home</a></li>
+                <li><a href="#my_goal">my goals</a></li>
                 <li><a href="#projects">projects</a> </li>
                 <li><a href="#footer">about me</a></li>
             </ul>
@@ -43,29 +45,35 @@
             <img id="image" src="CSS/img/profile.webp" alt="">
             <div id="presentation">
                 <div id="divisor"></div>
-                <h1 class="mainText">I'm Alejandro Velasquez:</h1>
+                <h1 class="mainText">I am Alejandro Velasquez:</h1>
                 <h2 class="mainText">full-stack web developer <span>(junior)</span></h2>
                 <div id="divisor"></div>
                 <p class="mainText">
                     I am a motivated young man from Medellín, Colombia. Currently, I am improving my skills at the
                     <span>Microverse</span>
-                    Bootcamp where I'm training as an international full-stack web developer.
+                    Bootcamp where I am training as an international full-stack web developer.
                 </p>
-                <p class="mainText"> I'm concentrating on technologies like <span>JavaScript</span>,
+                <p class="mainText"> Concentrating on technologies like <span>JavaScript</span>,
                     <span>React.js</span>, <span>Redux</span>, <span>Ruby on Rails</span>, as well
                     as <span>data structures</span>, and I'll be more than glad to work / collaborate with you, feel
                     free to reach out to me at any time.
                 </p>
                 <div id="divisor"></div>
                 <div id="actionCont">
-                    <a id="action" href="#divider" target="">learn more</a>
+                    <a id="action" href="#projects" target="">learn more</a>
                 </div>
 
             </div>
         </div>
-        <div id="projects">
-           <h1>.</h1>
+        <div id="goalCont">
+            <div id="goalBar">
+                <h1>here are some goals that I want to accomplish along my software developer career</h1>
+            </div>
         </div>
+        <div id="projects">
+            <h1>.</h1>
+        </div>
+
         <div id="card" class="container">
             <div id="divider">
                 <h1>Here are some projects that I've developed alone (only HTML, CSS and a bite of JavaScript)</h1>
@@ -75,22 +83,16 @@
 
             <section id="content">
                 <div id="console">
-                    <h1><span id="span" class="glow1">&ltfull-stack web developer/></span></h1>
-                    <p>Hello World!, my name is Alejandro Velasquez. I'm actually a front end web developer student from
-                        Medellin, Colombia.
+                    <h1><span id="span" class="glow1">&lthe projects that I've developed/></span></h1>
+                    <p>On this section, you will see the projects that I've developed since I started, you will be able to see the improvement on my web designing as well on my optimization
                     </p>
                     <p>I am passionate about creating visually stunning and user-friendly websites. I look forward to
-                        sharing my skills and knowledge with others in the field and continuing to grow as a developer.</p>
-                    <div id="socialMedia">
-                        <li><a class="link" href="https://github.com/VelzckC0D3" target="_blank">&ltGitHub></a></li>
-                        <li><a class="link" href="https://www.linkedin.com/in/velzckcode/" target="_blank">&ltLinkedin></a>
-                        </li>
-                    </div>
+                        sharing my skills and knowledge with others in the field and continuing to grow as a developer.
+                    </p>
                 </div>
                 <div id="console">
                     <div id="projects_grid">
                         <h1><span id="span" class="glow2">&lte-commerce website demo></span>
-                            <p>lorem</p>
                         </h1>
                         <img class="grid-pos" id="imggrid" src="CSS/img/profile.webp" alt="">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus aut quaerat vitae iusto, odit
@@ -127,7 +129,7 @@
             <div id="footerInfo">
                 <div class="footerInfo">
                     <h2>About Me</h2>
-                    <p>I'm a full-stack web developer that wants to make applications with fluent functions and
+                    <p>I am a full-stack web developer that wants to make applications with fluent functions and
                         animations,
                         clear interface that allows the user to navigate through it without problems, offering the best
                         optimization and functions to allow the user to have a friendly experience with my websites.</p>
@@ -136,16 +138,18 @@
 
                 <div class="footerInfo">
                     <h2>Social Networks</h2>
+                    <p>Do not hesitate to reach me on any of my networks</p>
                     <a class="socialNetworks" href="https://www.linkedin.com/in/velzckcode/"
-                        target="_blank">&ltLinkedin></a>
-                    <a class="socialNetworks" href="https://github.com/VelzckC0D3" target="_blank">&ltGitHub></a>
+                        target="_blank">&ltLinkedin> <i id="icon" class="fa-brands fa-linkedin"></i></a>
+                    <a class="socialNetworks" href="https://github.com/VelzckC0D3" target="_blank">&ltGitHub> <i
+                            id="icon" class="fa-brands fa-github"></i></a>
                     <a class="socialNetworks" href="https://www.instagram.com/alejandro.velzck/"
-                        target="_blank">&ltInstagram></a>
+                        target="_blank">&ltInstagram> <i id="icon" class="fa-brands fa-instagram"></i></a>
                 </div>
 
                 <div class="footerInfo">
                     <h2>Skills</h2>
-                    <p>At this moment I'm learning at the Microverse international bootcamp, focusing on technologies
+                    <p>At this moment I am learning at the Microverse international bootcamp, focusing on technologies
                         such as: <span>JavaScript</span>, <span>TypeScript</span>, <span>React.js</span>,
                         <span>Redux</span>, <span>Ruby</span>, <span>Ruby on Rails</span>, also on <span>Data
                             Structures</span>
@@ -157,12 +161,12 @@
                 <div id="endLine"></div>
             </div>
             <div id="end">
-                <h1>&ltAlejandro Velasquez (velzckC0D3) - 2023></h1>
-                <h1>Medellin, Colombia</h1>
+                <h1>&ltAlejandro Velasquez (velzckC0D3) / 2022 - 2023></h1>
+                <h1> <i class="fa-sharp fa-solid fa-location-dot"></i> Medellin, Colombia</h1>
+
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

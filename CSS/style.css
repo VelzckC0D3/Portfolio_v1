@@ -48,26 +48,16 @@ body {
   box-shadow: 0px 0px 127px 33px rgba(0, 0, 0, 0.75);
 }
 
-.shadowInset {
-  -webkit-box-shadow: inset -9px 11px 16px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: inset -9px 11px 16px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: inset -9px 11px 16px 0px rgba(0, 0, 0, 0.75);
-}
-
 /* ---- GLOBALS // GLOBALS // GLOBALS ---- */
 
 /* ---- BACKGROUND // BACKGROUND // BACKGROUND ---- */
 
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+#bg {
+  position: absolute;
+  bottom: -65vh;
+  width: 100vw;
+  z-index: -1;
+  opacity: 0.45;
 }
 
 /* ---- BACKGROUND // BACKGROUND // BACKGROUND ---- */
@@ -112,7 +102,7 @@ body {
   font-size: 75%;
 }
 
-#headerText h1{
+#headerText h1 {
   font-size: 160%;
 }
 
@@ -284,8 +274,31 @@ body {
   height: 3rem;
 }
 
+#goalCont {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(58, 58, 58);
+  color: white;
+  margin: 3rem 0rem -4vw;
+}
+
+#goalBar {
+  width: 100vw;
+  height: 7vh;
+  background-color: rgb(0, 0, 0);
+  padding: 0;
+  margin: -1.5rem 0vw 0vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid white;
+  font-size: 50%;
+}
+
 #projects {
   height: 8vh;
+  color: transparent;
 }
 
 #divider {
@@ -307,7 +320,7 @@ body {
 #card {
   width: 100%;
   /* height: 77vh; */
-  background: #202020; 
+  background: #202020;
   border-top: 3px solid white;
   padding: 1rem 0rem 1rem;
   display: flex;
@@ -397,14 +410,6 @@ body {
   margin: 1.3rem 0 1rem 0;
 }
 
-#card::before {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  width: 33vw;
-  height: 31vh;
-}
-
 @keyframes glow2 {
   0% {
     opacity: 1;
@@ -456,6 +461,14 @@ body {
   color: white !important;
 }
 
+#card p {
+  font-size: 0.85rem;
+  cursor: text;
+  z-index: 1;
+  color: var(--pGrey);
+  text-align: left;
+}
+
 #socialMedia li:hover .link {
   color: var(--pGreen);
   font-weight: bold;
@@ -469,33 +482,7 @@ body {
   transition: all 300ms;
 }
 
-#card p {
-  font-size: 0.85rem;
-  cursor: text;
-  z-index: 1;
-  color: var(--pGrey);
-  text-align: left;
-}
-
-#card::after {
-  content: "";
-  width: 30vw;
-  height: 12.5vw;
-  position: absolute;
-}
-
 /* ---- CARD // CARD // CARD ---- */
-
-/* ////////////////////////////////////// */
-
-/* ---- CONTENT // CONTENT // CONTENT ---- */
-
-#content_title {
-  color: white;
-  text-transform: lowercase;
-}
-
-/* ---- CONTENT // CONTENT // CONTENT ---- */
 
 /* ////////////////////////////////////// */
 
@@ -504,7 +491,8 @@ body {
 #footer {
   display: flex;
   align-items: center;
-  height: 40vh;
+  /*   height: 40vh; */
+  padding: 3rem 0rem 0rem;
   width: 100vw;
   left: 0;
   right: 0;
@@ -514,10 +502,12 @@ body {
   cursor: default;
   align-self: flex-end;
   justify-self: flex-end;
+  border-top: 3px solid white;
 }
 
 #footerCont {
-  height: 35vh;
+  /*   height: 35vh; */
+  width: 85vw;
   padding: 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
@@ -539,20 +529,11 @@ body {
   padding: 0 0.85rem 0;
 }
 
-#footer::before {
-  content: "";
-  width: 100%;
-  height: 3px;
-  align-self: flex-start;
-  background-color: white;
-  position: absolute;
-}
-
 #footerCont h1 {
   font-size: 120%;
 }
 
-#footerInfo{
+#footerInfo {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
@@ -564,24 +545,39 @@ body {
 }
 
 .footerInfo {
+  height: 85%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  margin: 0 1rem;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  border: 3px solid rgb(255, 255, 255, 0.2);
+}
+
+#icon {
+  transform: scale(1.4);
+}
+
+#titleIcon {
+  color: white;
+  background-color: wheat;
 }
 
 .footerInfo p {
   color: var(--pGrey);
+  text-align: left;
 }
 
 .footerInfo a {
-  color: var(--pGrey);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   transition: all 300ms ease-in-out;
 }
 
 .footerInfo a:hover {
-  color: white;
+  color: var(--pGreen);
   transform: scale(1.3);
 }
 
@@ -589,22 +585,23 @@ body {
   margin: 1rem 0 0;
 }
 
-#aboutMeCont {
-
-}
-
 #endLineCont {
-  padding: 1rem;
+  padding: 2rem 0 1rem;
 }
 
 #endLine {
-  width: 95vw;
+  width: 77vw;
   height: 0.13rem;
   background-color: rgb(255, 255, 255, 0.2);
 }
 
 #end {
   color: var(--pGrey);
+  width: 77vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
 }
 
 /* ---- FOOTER // FOOTER // FOOTER ---- */
